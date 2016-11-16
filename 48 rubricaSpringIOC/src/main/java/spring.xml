@@ -5,6 +5,30 @@
 <beans>
 	<bean id="rubrica" class="it.alfasoft.alex.bean.Rubrica" autowire="byName">
 
+		<property name="voci">
+
+			<list>
+				<ref bean="voce1" />
+				<ref bean="voce2" />
+				<ref bean="voce3" />
+			</list>
+
+		</property>
+	</bean>
+
+	<bean id="voce1" class="it.alfasoft.bean.Voce">
+		<property name="nome" value="Pippo"></property>
+		<property name="telefono" value="11"></property>
+	</bean>
+
+	<bean id="voce2" class="it.alfasoft.Voce">
+		<property name="nome" value="Sam"></property>
+		<property name="telefono" value="99999"></property>
+	</bean>
+
+	<bean id="voce3" class="it.alfasoft.Voce">
+		<property name="nome" value="Paul"></property>
+		<property name="telefono" value="78912"></property>
 	</bean>
 
 
