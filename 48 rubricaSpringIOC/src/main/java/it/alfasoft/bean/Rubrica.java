@@ -33,5 +33,21 @@ public class Rubrica {
 		this.rubrica = rubrica;
 	}
 
-	
+	public void stampaTutteVoci() {
+		for (Voce v : rubrica) {
+			System.out.println(v.getNome() + " " + v.getTelefono());
+		}
+	}
+
+	public Voce getVoceByName(String nome) {
+		Voce out = null;
+		for (Voce v : rubrica) {
+			if (v.getNome().equals(nome)) {
+				out = v;
+				break;
+			}
+		}
+		return out;
+	}
+
 }
