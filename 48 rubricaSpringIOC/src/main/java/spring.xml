@@ -3,9 +3,9 @@
 "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="rubrica" class="it.alfasoft.alex.bean.Rubrica" autowire="byName">
+	<bean id="rubrica" class="it.alfasoft.bean.Rubrica" scope="prototype">
 
-		<property name="voci">
+		<property name="rubrica">
 
 			<list>
 				<ref bean="voce1" />
@@ -21,12 +21,12 @@
 		<property name="telefono" value="11"></property>
 	</bean>
 
-	<bean id="voce2" class="it.alfasoft.Voce">
+	<bean id="voce2" class="it.alfasoft.bean.Voce">
 		<property name="nome" value="Sam"></property>
 		<property name="telefono" value="99999"></property>
 	</bean>
 
-	<bean id="voce3" class="it.alfasoft.Voce">
+	<bean id="voce3" class="it.alfasoft.bean.Voce">
 		<property name="nome" value="Paul"></property>
 		<property name="telefono" value="78912"></property>
 	</bean>
